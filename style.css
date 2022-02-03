@@ -4,46 +4,68 @@
     margin: 0;
     padding: 0;
 
-    --white: hsl(0, 0%, 100%);
-    --light-gray: hsl(212, 45%, 89%);
-    --grayish-blue: hsl(220, 15%, 55%);
-    --dark-blue: hsl(218, 44%, 22%);
+    --card-background: hsl(0, 0%, 100%);
+    --page-background: hsl(212, 45%, 89%);
+    --textp: hsl(220, 15%, 55%);
+    --texth1: hsl(218, 44%, 22%);
 
     font-family: 'Outfit';
+
+    font-size: 16px;
 }
 
 body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: var(--page-background);
 
     display: flex;
     justify-content: center;
-    align-items: flex-start;
-
-    background-color: var(--light-gray);
+    align-items: center;
 }
 
-main {
-    width: 80%;
-    height: 50%;
+.card {
+    /* width: 80vw; */
+    width: 335px;
+    /* height: 80vh; */
+    height: 520px;
+    background-color: var(--card-background);
 
-    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
 
-    border-radius: 10px;;
+    border-radius: 15px;
 }
 
 .qr-code-section img {
-    width: 350px;
+    width: 300px;
 
-    padding-top: 10px;
-    border-radius: 10px;
+    margin-top: 17px;
+    border-radius: 15px;
 }
 
-.qr-code-section {
+.text {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 10px;
 }
+
+.text h1 {
+    color: var(--texth1);
+    font-size: 1.6rem;
+
+    text-align: center;
+
+    margin: 15px 20px;
+}
+
+.text p {
+    color: var(--textp);
+    font-size: 1rem;
+
+    text-align: center;
+
+    margin: 0 40px;
+}
+
